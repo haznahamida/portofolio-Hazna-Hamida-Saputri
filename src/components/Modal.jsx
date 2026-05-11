@@ -20,11 +20,10 @@ function useWindowWidth() {
 export default function Modal({ project: p, onClose }) {
   const [currentImage, setCurrentImage] = useState(0);
   const windowWidth = useWindowWidth();
+  const isProjectMobile = p.deviceType === "mobile";
 
   // Pakai ukuran LAYAR, bukan tipe project
-  const isSmallScreen = windowWidth < 768;
-  // Tipe project tetap dipakai untuk tinggi gambar saja
-  const isProjectMobile = p.deviceType === "mobile";
+  const isSmallScreen = windowWidth < 768 && isProjectMobile;
 
   useEffect(() => {
     setCurrentImage(0);
