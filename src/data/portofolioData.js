@@ -64,9 +64,9 @@ export const PROJECTS = [
   {
     id: 2,
     title: "EduPlan",
-    category: "Mobile Application Development",
+    category: "Web Application Development",
 
-    deviceType: "mobile",
+    deviceType: "Web",
 
     images: [
       "/Projects/ep1.jpg",
